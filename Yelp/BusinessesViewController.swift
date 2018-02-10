@@ -15,6 +15,8 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UISearc
     var searchController: UISearchController!
     var businesses: [Business]!
     
+    var isMoreDataLoading = false
+    
     var filteredBusinesses: [Business]!
     
     override func viewDidLoad() {
