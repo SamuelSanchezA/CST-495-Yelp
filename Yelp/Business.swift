@@ -84,6 +84,11 @@ class Business: NSObject {
         return businesses
     }
     
+    func contains(searchText: String) -> Bool{
+        print("Business Name: \(self.name), Search Text: \(searchText)")
+        return (self.name?.lowercased().contains(searchText.lowercased()))!
+    }
+    
     class func searchWithTerm(term: String, completion: @escaping ([Business]?, Error?) -> Void) {
         _ = YelpClient.sharedInstance.searchWithTerm(term, completion: completion)
     }
